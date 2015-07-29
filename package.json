@@ -1,0 +1,33 @@
+{
+  "name": "SlackStocks",
+  "version": "0.0.1",
+  "description": "A stocks bot for Slack",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zivc/SlackStocks.git"
+  },
+  "keywords": [
+    "slack",
+    "stocks",
+    "and",
+    "shares",
+    "ticker",
+    "bot"
+  ],
+  "author": "Ash Taylor (a@zi.vc)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zivc/SlackStocks/issues"
+  },
+  "homepage": "https://github.com/zivc/SlackStocks",
+  "devDependencies": {
+    "chalk": "^1.1.0",
+    "irc": "^0.3.12",
+    "superagent": "^1.2.0",
+    "yahoo-finance": "^0.2.11"
+  }
+}
