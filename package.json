@@ -27,6 +27,7 @@
   "devDependencies": {
     "chalk": "^1.1.0",
     "irc": "^0.3.12",
+    "qs": "^4.0.0",
     "superagent": "^1.2.0",
     "yahoo-finance": "^0.2.11"
   }
