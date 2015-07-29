@@ -1,9 +1,7 @@
 module.exports = {
-	slack:{
-		team:'',
-		user:'',
-		password:'',
-		channels:['*'],
-		webApiToken:''
-	}
+	team:'',
+	user:'',
+	password:'',
+	channels:['*'],
+	webApiToken:''
 };
