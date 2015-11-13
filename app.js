@@ -8,6 +8,7 @@ app.use(require('body-parser').urlencoded({ extended: true }));
 app.post('/hello', function (req, res, next) {
 	console.log(req.body);
 	var ticker = req.body.text.substr(2),
+		userName = req.body.user_name,
 		botPayload = {
 			text : 'Chart for $TSLA',
 			image_url: 'http://chart.finance.yahoo.com/t?s='+ticker.toUpperCase()+'&lang=en-US&region=US&width=450&height=250'
