@@ -11,7 +11,9 @@ app.post('/hello', function (req, res, next) {
 		userName = req.body.user_name,
 		botPayload = {
 			text : 'Chart for $TSLA',
-			image_url: 'http://chart.finance.yahoo.com/t?s='+ticker.toUpperCase()+'&lang=en-US&region=US&width=450&height=250'
+			attachments: [
+				{image_url: 'http://chart.finance.yahoo.com/t?s='+ticker.toUpperCase()+'&lang=en-US&region=US&width=450&height=250'}
+			]
 		};
 
 	// avoid infinite loop
