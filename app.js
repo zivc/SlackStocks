@@ -7,9 +7,10 @@ app.use(require('body-parser').urlencoded({ extended: true }));
 // test route
 app.post('/hello', function (req, res, next) {
 	console.log(req.body);
-	var userName = req.body.user_name,
+	var ticker = req.body.text.substr(2),
 		botPayload = {
-			text : 'Hello, ' + userName + '!'
+			text : 'Chart for $TSLA',
+			image_url: 'http://chart.finance.yahoo.com/t?s='+ticker.toUpperCase()+'&lang=en-US&region=US&width=450&height=250'
 		};
 
 	// avoid infinite loop
