@@ -10,7 +10,7 @@ app.post('/hello', function (req, res, next) {
 	var ticker = req.body.text.substr(2),
 		userName = req.body.user_name,
 		botPayload = {
-			text : 'Chart for $TSLA '+'http://chart.finance.yahoo.com/t?s='+ticker.toUpperCase()+'&lang=en-US&region=US&width=450&height=250',
+			text : 'Chart for $TSLA '+'http://chart.finance.yahoo.com/t?s='+ticker.toUpperCase()+'&lang=en-US&region=US&width=800&height=300',
 			// attachments: [
 			// 	{image_url: 'http://chart.finance.yahoo.com/t?s='+ticker.toUpperCase()+'&lang=en-US&region=US&width=450&height=250'}
 			// ]
