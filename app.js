@@ -2,10 +2,21 @@ var express = require('express'),
 	app = express(),
 	port = process.env.PORT || 3000;
 
+app.use(require('body-parser').urlencoded({ extended: true }));
+
 // test route
-app.get('/hello', function (req, res) {
-	console.log(req.body);
-	res.status(200).send('Hello world!');
+app.post('/hello', function (req, res, next) {
+	var userName = req.body.user_name,
+		botPayload = {
+			text : 'Hello, ' + userName + '!'
+		};
+
+	// avoid infinite loop
+	if (userName !== 'slackbot') {
+		return res.status(200).json(botPayload);
+	} else {
+		return res.status(200).end();
+	}
 });
 
 // error handler
